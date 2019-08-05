@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import YouBike from '@/components/pages/YouBike'
 import News from '@/components/pages/News'
+import GIF from '@/components/pages/GIFSearch'
 
 Vue.use(Router)
 
@@ -16,12 +17,17 @@ export default new Router({
     {
       path: '/youbike',
       name: 'YouBike',
-      component: YouBike
+      component: YouBike,
     },
     {
       path: '/news',
       name: 'News',
       component: News
+    },
+    {
+      path: '/gif',
+      name: 'GIF',
+      component: GIF
     }
   ]
 })

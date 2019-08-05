@@ -15,19 +15,24 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <router-link class="nav-link" to="/">
+          <li class="nav-item" :class="{'active': link == 'home'}">
+            <router-link class="nav-link" to="/" @click.prevent="link = 'home'">
               <font-awesome-icon :icon="['fas', 'home']" />首頁
             </router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/youbike">
-              <font-awesome-icon :icon="['fas', 'bicycle']" /> YouBike查詢
+          <li class="nav-item" :class="{'active': link == 'bicycle'}">
+            <router-link class="nav-link" to="/youbike" @click.prevent="link = 'bicycle'">
+              <font-awesome-icon :icon="['fas', 'bicycle']" />YouBike
             </router-link>
           </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/news">
-              <font-awesome-icon :icon="['far', 'newspaper']" /> 新聞
+          <li class="nav-item" :class="{'active': link == 'news'}">
+            <router-link class="nav-link" to="/news" @click.prevent="link = 'news'">
+              <font-awesome-icon :icon="['far', 'newspaper']" />新聞
+            </router-link>
+          </li>
+          <li class="nav-item" :class="{'active': link == 'gif'}">
+            <router-link class="nav-link" to="/gif" @click.prevent="link = 'gif'">
+              <font-awesome-icon :icon="['fas', 'images']" />GIF搜尋
             </router-link>
           </li>
         </ul>
@@ -36,8 +41,18 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      link: ''
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 nav {
-  background-color: #e3f2fd !important;
+  background-color: #e3f2fd;
 }
 </style>
