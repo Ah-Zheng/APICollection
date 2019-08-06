@@ -21,10 +21,6 @@ fontawesome.library.add(regular)
 fontawesome.library.add(brands)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
-// GoTop
-import GoTop from '@inotom/vue-go-top'
-Vue.use(GoTop);
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

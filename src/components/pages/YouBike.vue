@@ -38,20 +38,15 @@
         <YouBikeList :station-list="stationList"></YouBikeList>
       </div>
     </div>
-    <a href="#" class="goTop" @click.prevent="goTop()" v-show="isShowGoTop">
-      <font-awesome-icon :icon="['fas', 'angle-up']"></font-awesome-icon>
-    </a>
   </div>
 </template>
 
 <script>
 import $ from 'jquery';
 import YouBikeList from '@/components/pages/YouBikeList';
-import GoTop from '@inotom/vue-go-top';
 export default {
   components: {
-    YouBikeList,
-    GoTop
+    YouBikeList
   },
   data() {
     return {
@@ -60,7 +55,6 @@ export default {
       area: '',
       areaData: [],
       stationList: [],
-      isShowGoTop: false
     };
   },
   watch: {
@@ -72,7 +66,6 @@ export default {
   },
   mounted() {
     this.getYouBikeData();
-    this.initGoTop();
   },
   methods: {
     getYouBikeData(value) {
@@ -109,39 +102,11 @@ export default {
           vm.stationList.push(vm.youBikeData[i]);
         }
       }
-    },
-    goTop() {
-      $('html, body').animate({ scrollTop: 0 }, 900);
-    },
-    initGoTop() {
-      let vm = this;
-      $(document).bind('scroll', function () {
-        if ($(document).scrollTop() > 80) {
-          vm.isShowGoTop = true;
-        } else {
-          vm.isShowGoTop = false;
-        }
-      });
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.goTop {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #00cc99;
-  color: white;
-  text-decoration: none;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-}
-.goTop:hover {
-  opacity: 0.6;
-}
+
 </style>
