@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-mine">
-      <router-link class="navbar-brand" to="/">阿正萬事屋</router-link>
+      <router-link class="navbar-brand" to="/">共享PaPa造</router-link>
       <button
         class="navbar-toggler"
         type="button"
