@@ -3,6 +3,7 @@
     <table class="table table-hover">
       <thead class="text-center bg-light">
         <th class="text-left">站名</th>
+        <th>是否營運</th>
         <th>可借車輛</th>
         <th>可還車位</th>
       </thead>
@@ -16,6 +17,7 @@
               @click.prevent="setStationData(item)"
             >{{ item.sna }}</a>
           </td>
+          <td>{{ act[item.act] }}</td>
           <td>{{ item.sbi }}</td>
           <td>{{ item.bemp }}</td>
         </tr>
@@ -54,12 +56,10 @@ export default {
   props: ['stationList'],
   data() {
     return {
-      stationName: ''
+      stationName: '',
+      act: ['暫停營運', '營運中']
     }
   },
-  // watch: {
-
-  // },
   methods: {
     setStationData(station) {
       let vm = this;

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    首頁
+  <div class="container">
+    
   </div>
 </template>
 

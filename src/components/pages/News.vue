@@ -25,14 +25,14 @@
         >共享單車</a>
         <a
           class="nav-item nav-link"
-          id="nav-obike-tab"
+          id="nav-CityBike-tab"
           data-toggle="tab"
-          href="#nav-obike"
+          href="#nav-CityBike"
           role="tab"
-          aria-controls="nav-obike"
+          aria-controls="nav-CityBike"
           aria-selected="false"
-          @click.prevent="getNewsData(`obike`), link = 'obike'"
-        >OBike</a>
+          @click.prevent="getNewsData(`'citybike'`), link = 'CityBike'"
+        >CityBike</a>
       </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -92,7 +92,6 @@ export default {
         url: `https://newsapi.org/v2/everything?q=${value}&sortBy=parpularity&apiKey=${vm.apiKey}`,
         dataType: "JSON",
         success: function (response) {
-          // console.log(response);
           vm.newsData = [];
           vm.newsData = [...response.articles];
           for (let i = 0; i < vm.newsData.length; i++) {

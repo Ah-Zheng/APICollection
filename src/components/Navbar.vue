@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-mine">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-mine">
       <router-link class="navbar-brand" to="/">阿正萬事屋</router-link>
       <button
         class="navbar-toggler"
@@ -15,29 +15,48 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item" :class="{'active': link == 'home'}">
-            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/" @click.prevent="link = 'home'">
-              <font-awesome-icon :icon="['fas', 'home']" />首頁
+          <li class="nav-item mx-3" :class="{'active': link == 'home'}">
+            <router-link
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+              class="nav-link"
+              to="/"
+              @click.prevent="link = 'home'"
+            >
+              <font-awesome-icon :icon="['fas', 'home']" />&nbsp;首頁
             </router-link>
           </li>
-          <li class="nav-item" :class="{'active': link == 'bicycle'}">
-            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/youbike" @click.prevent="link = 'bicycle'">
-              <font-awesome-icon :icon="['fas', 'bicycle']" />YouBike
+          <li class="nav-item mx-3" :class="{'active': link == 'bicycle'}">
+            <router-link
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+              class="nav-link"
+              to="/youbike"
+              @click.prevent="link = 'bicycle'"
+            >
+              <font-awesome-icon :icon="['fas', 'bicycle']" />&nbsp;YouBike
             </router-link>
           </li>
-          <li class="nav-item" :class="{'active': link == 'news'}">
-            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/news" @click.prevent="link = 'news'">
-              <font-awesome-icon :icon="['far', 'newspaper']" />新聞
+          <li class="nav-item mx-3" :class="{'active': link == 'news'}">
+            <router-link
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+              class="nav-link"
+              to="/news"
+              @click.prevent="link = 'news'"
+            >
+              <font-awesome-icon :icon="['far', 'newspaper']" />&nbsp;新聞
             </router-link>
           </li>
-          <li class="nav-item" :class="{'active': link == 'gif'}">
-            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/gif" @click.prevent="link = 'gif'">
-              <font-awesome-icon :icon="['fas', 'images']" />GIF搜尋
-            </router-link>
-          </li>
-          <li class="nav-item" :class="{'active': link == 'pixelbay'}">
-            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/pixelbay" @click.prevent="link = 'pixelbay'">
-              <font-awesome-icon :icon="['fas', 'images']" />PixelBay搜尋
+          <li class="nav-item mx-3" :class="{'active': link == 'gif'}">
+            <router-link
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show"
+              class="nav-link"
+              to="/photoshare"
+              @click.prevent="link = 'photoshare'"
+            >
+              <font-awesome-icon :icon="['fas', 'images']" />&nbsp;圖片分享
             </router-link>
           </li>
         </ul>
@@ -59,5 +78,11 @@ export default {
 <style lang="scss" scoped>
 nav {
   background-color: #e3f2fd;
+  box-sizing: border-box;
+}
+
+.nav-link:hover {
+  opacity: .6;
+  border-bottom: 2px solid #45a6ec;
 }
 </style>

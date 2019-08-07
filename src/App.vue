@@ -8,7 +8,7 @@
 
 <script>
 import Navbar from "@/components/Navbar";
-import GoTop from "@/components/pages/GoTop";
+import GoTop from "@/components/GoTop";
 export default {
   name: 'App',
   components: {

@@ -32,7 +32,7 @@
               </select>
             </div>
             <button class="btn btn-info w-100 mt-3" @click.prevent="setNewestDate()">
-              <font-awesome-icon :icon="['fas', 'sync']" /> 刷新畫面
+              <font-awesome-icon :icon="['fas', 'sync']" />&nbsp;刷新畫面
             </button>
           </div>
         </div>
@@ -73,7 +73,6 @@ export default {
   },
   mounted() {
     this.getYouBikeData();
-    this.getAreaData();
     $('#areaOp').prop('disabled', true);
     setTimeout(function () {
       $('#areaOp').prop('disabled', false);
@@ -87,11 +86,13 @@ export default {
       $.ajax({
         type: "GET",
         url: "https://cors-anywhere.herokuapp.com/data.ntpc.gov.tw/api/v1/rest/datastore/382000000A-000352-001",
-        async: false,
         dataType: "JSON",
         success: function (response) {
           vm.youBikeData = [...response.result.records];
           vm.getStationList(value, vm.dataIndex);
+          if (vm.areaData == '') {
+            vm.getAreaData();
+          }
           vm.txt = '';
         }
       });
