@@ -57,6 +57,9 @@ export default {
       stationName: ''
     }
   },
+  // watch: {
+
+  // },
   methods: {
     setStationData(station) {
       let vm = this;

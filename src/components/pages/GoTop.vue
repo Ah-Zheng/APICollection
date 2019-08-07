@@ -43,6 +43,7 @@ export default {
   text-align: center;
   border-radius: 50%;
   background-color: #00cc99;
+  opacity: 0.3;
   color: white;
   text-decoration: none;
   position: fixed;
@@ -50,6 +51,6 @@ export default {
   bottom: 50px;
 }
 .goTop:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 </style>

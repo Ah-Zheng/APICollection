@@ -16,57 +16,27 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item" :class="{'active': link == 'home'}">
-            <router-link
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
-              class="nav-link"
-              to="/"
-              @click.prevent="link = 'home'"
-            >
+            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/" @click.prevent="link = 'home'">
               <font-awesome-icon :icon="['fas', 'home']" />首頁
             </router-link>
           </li>
           <li class="nav-item" :class="{'active': link == 'bicycle'}">
-            <router-link
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
-              class="nav-link"
-              to="/youbike"
-              @click.prevent="link = 'bicycle'"
-            >
+            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/youbike" @click.prevent="link = 'bicycle'">
               <font-awesome-icon :icon="['fas', 'bicycle']" />YouBike
             </router-link>
           </li>
           <li class="nav-item" :class="{'active': link == 'news'}">
-            <router-link
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
-              class="nav-link"
-              to="/news"
-              @click.prevent="link = 'news'"
-            >
+            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/news" @click.prevent="link = 'news'">
               <font-awesome-icon :icon="['far', 'newspaper']" />新聞
             </router-link>
           </li>
           <li class="nav-item" :class="{'active': link == 'gif'}">
-            <router-link
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
-              class="nav-link"
-              to="/gif"
-              @click.prevent="link = 'gif'"
-            >
+            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/gif" @click.prevent="link = 'gif'">
               <font-awesome-icon :icon="['fas', 'images']" />GIF搜尋
             </router-link>
           </li>
           <li class="nav-item" :class="{'active': link == 'pixelbay'}">
-            <router-link
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
-              class="nav-link"
-              to="/pixelbay"
-              @click.prevent="link = 'pixelbay'"
-            >
+            <router-link data-toggle="collapse" data-target=".navbar-collapse.show" class="nav-link" to="/pixelbay" @click.prevent="link = 'pixelbay'">
               <font-awesome-icon :icon="['fas', 'images']" />PixelBay搜尋
             </router-link>
           </li>

@@ -14,5 +14,6 @@
     - Node.js
 
 * API : 
-    - 新北市公共自行車租賃系統(YouBike) api
-    - Google Map JavaScript api
+    - 新北市公共自行車租賃系統(YouBike) API
+    - Google Map JavaScript API
+    - News API
