@@ -19,7 +19,7 @@
           class="nav-link"
           id="static-tab"
           data-toggle="tab"
-          to="/photoshare/pixelbay"
+          to="/photoshare/pixabay"
           role="tab"
           aria-controls="static"
           aria-selected="false"
@@ -30,7 +30,6 @@
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <router-view></router-view>
       </div>
-      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></div>
     </div>
   </div>
 </template>
@@ -38,7 +37,7 @@
 <script>
 import $ from 'jquery';
 import GIF from '@/components/pages/GIFSearch';
-import PixelBay from '@/components/pages/PixelBay';
+import Pixabay from '@/components/pages/Pixabay';
 export default {
   data() {
     return {

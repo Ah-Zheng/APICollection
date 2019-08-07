@@ -4,7 +4,7 @@ import Home from '@/components/Home'
 import YouBike from '@/components/pages/YouBike'
 import News from '@/components/pages/News'
 import GIF from '@/components/pages/GIFSearch'
-import PixelBay from '@/components/pages/PixelBay'
+import Pixabay from '@/components/pages/Pixabay'
 import PhotoShare from '@/components/pages/PhotoShare'
 
 Vue.use(Router)
@@ -37,9 +37,9 @@ export default new Router({
           component: GIF
         },
         {
-          path: 'pixelbay',
-          name: 'PixelBay',
-          component: PixelBay
+          path: 'Pixabay',
+          name: 'Pixabay',
+          component: Pixabay
         }
       ]
     },
