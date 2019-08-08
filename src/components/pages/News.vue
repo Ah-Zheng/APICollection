@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-center mt-3">相關新聞</h1>
+    <h1 class="text-center pt-3 mb-5 title">相關新聞</h1>
     <nav class="mt-3">
       <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
         <a
@@ -25,14 +25,14 @@
         >共享單車</a>
         <a
           class="nav-item nav-link"
-          id="nav-CityBike-tab"
+          id="nav-Sharing-economy-tab"
           data-toggle="tab"
-          href="#nav-CityBike"
+          href="#nav-Sharing-economy"
           role="tab"
-          aria-controls="nav-CityBike"
+          aria-controls="nav-Sharing-economy"
           aria-selected="false"
-          @click.prevent="getNewsData(`'citybike'`), link = 'CityBike'"
-        >CityBike</a>
+          @click.prevent="getNewsData(`共享經濟`), link = 'Sharing-economy'"
+        >共享經濟</a>
       </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -51,7 +51,7 @@
                     <img class="img-fluid img-thumbnail" :src="item.urlToImage" alt />
                   </div>
                   <div class="col-12 col-lg-8">
-                    <h4 class="h5 title">
+                    <h4 class="h5 news-title">
                       <a :href="item.url" target="_bank">{{ item.title }}</a>
                     </h4>
                     <p>{{ item.description }}</p>
@@ -107,11 +107,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  min-height: 92vh;
+  background-color: white;
+}
+
 img {
   width: 100%;
 }
 @media (max-width: 994px) {
-  .title {
+  .news-title {
     margin: 10px 0;
   }
 }

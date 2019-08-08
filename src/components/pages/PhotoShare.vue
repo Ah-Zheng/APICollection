@@ -1,14 +1,13 @@
 <template>
   <div class="container">
-    <h1 class="text-center my-4">圖片分享</h1>
-
+    <h1 class="text-center pt-3 mb-5 title">圖片分享</h1>
     <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
       <li class="nav-item">
         <router-link
           class="nav-link active"
           id="gif-tab"
           data-toggle="tab"
-          to="/photoshare/"
+          to="/photoshare"
           role="tab"
           aria-controls="gif"
           aria-selected="true"
@@ -45,3 +44,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.title {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+.container {
+  min-height: 92vh;
+  background-color: white;
+}
+</style>

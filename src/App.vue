@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar></Navbar>
     <router-view />
-    <GoTop/>
+    <GoTop />
   </div>
 </template>
 
@@ -20,4 +20,12 @@ export default {
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap";
+body {
+  content: "";
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url('./assets/youbike.png');
+  background-size:cover;
+}
 </style>

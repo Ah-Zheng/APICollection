@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-mine">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <router-link class="navbar-brand" to="/">共享PaPa造</router-link>
       <button
         class="navbar-toggler"
@@ -14,8 +14,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item mx-3" :class="{'active': link == 'home'}">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-3" :class="{'active': this.$route.path == '/'}">
             <router-link
               data-toggle="collapse"
               data-target=".navbar-collapse.show"
@@ -26,7 +26,7 @@
               <font-awesome-icon :icon="['fas', 'home']" />&nbsp;首頁
             </router-link>
           </li>
-          <li class="nav-item mx-3" :class="{'active': link == 'bicycle'}">
+          <li class="nav-item mx-3" :class="{'active': this.$route.path == '/youbike'}">
             <router-link
               data-toggle="collapse"
               data-target=".navbar-collapse.show"
@@ -37,7 +37,7 @@
               <font-awesome-icon :icon="['fas', 'bicycle']" />&nbsp;YouBike
             </router-link>
           </li>
-          <li class="nav-item mx-3" :class="{'active': link == 'news'}">
+          <li class="nav-item mx-3" :class="{'active': this.$route.path == '/news'}">
             <router-link
               data-toggle="collapse"
               data-target=".navbar-collapse.show"
@@ -48,7 +48,10 @@
               <font-awesome-icon :icon="['far', 'newspaper']" />&nbsp;新聞
             </router-link>
           </li>
-          <li class="nav-item mx-3" :class="{'active': link == 'gif'}">
+          <li
+            class="nav-item mx-3"
+            :class="{'active': this.$route.path == '/photoshare' || this.$route.path == '/photoshare/pixabay'}"
+          >
             <router-link
               data-toggle="collapse"
               data-target=".navbar-collapse.show"
@@ -69,7 +72,6 @@
 export default {
   data() {
     return {
-      link: ''
     }
   }
 }
@@ -78,11 +80,5 @@ export default {
 <style lang="scss" scoped>
 nav {
   background-color: #e3f2fd;
-  box-sizing: border-box;
-}
-
-.nav-link:hover {
-  opacity: .6;
-  border-bottom: 2px solid #45a6ec;
 }
 </style>

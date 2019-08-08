@@ -42,8 +42,9 @@ export default {
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
-  background-color: #00cc99;
-  opacity: 0.3;
+  background-color: black;
+  // background-color: #00cc99;
+  opacity: 0.5;
   color: white;
   text-decoration: none;
   position: fixed;

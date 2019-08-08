@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="text-center my-4">新北YouBike即時查詢</h1>
+    <h1 class="text-center pt-3 mb-5 title">新北YouBike查詢</h1>
     <div class="row">
       <div class="col-12 col-lg-4 mb-3">
         <div class="card">
@@ -135,4 +135,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+  min-height: 92vh;
+  background-color: white;
+}
+
+.title {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+    0px -5px 35px rgba(255, 255, 255, 0.3);
+}
 </style>
