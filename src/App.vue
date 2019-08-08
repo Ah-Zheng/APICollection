@@ -20,12 +20,16 @@ export default {
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap";
-body {
-  content: "";
+.container {
+  margin-top: 56px;
+}
+
+#app {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left top;
-  background-image: url('./assets/youbike.png');
-  background-size:cover;
+  background-image: url("./assets/youbike.png");
+  background-size: cover;
+  // background-color: orange;
 }
 </style>

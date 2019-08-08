@@ -18,8 +18,8 @@
             >{{ item.sna }}</a>
           </td>
           <td>{{ act[item.act] }}</td>
-          <td>{{ item.sbi }}</td>
-          <td>{{ item.bemp }}</td>
+          <td :class="{'text-danger': item.sbi <= 5}">{{ item.sbi }}</td>
+          <td :class="{'text-danger': item.bemp <= 5}">{{ item.bemp }}</td>
         </tr>
       </tbody>
     </table>
@@ -36,7 +36,10 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">{{ stationName }}</h5>
+            <h5 class="modal-title ml-auto" id="exampleModalCenterTitle">
+              ({{ stationArea }})
+              {{ stationLocation }}
+            </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -56,14 +59,16 @@ export default {
   props: ['stationList'],
   data() {
     return {
-      stationName: '',
+      stationArea: '',
+      stationLocation: '',
       act: ['暫停營運', '營運中']
     }
   },
   methods: {
     setStationData(station) {
       let vm = this;
-      vm.stationName = station.sna;
+      vm.stationArea = station.sarea;
+      vm.stationLocation = station.ar;
       vm.initMap(station.lat, station.lng);
     },
     initMap(myLat, myLng) {
@@ -83,5 +88,35 @@ export default {
 #map {
   height: 400px; /* The height is 400 pixels */
   width: 100%; /* The width is the width of the web page */
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.css_table {
+  display: table;
+
+  .css_thead {
+    display: table-header-group;
+    font-weight: 600;
+    border: 1px solid black;
+  }
+
+  .css_tr {
+    display: table-row;
+  }
+
+  .css_tbody {
+    display: table-row-group;
+  }
+
+  .css_td {
+    display: table-cell;
+  }
 }
 </style>

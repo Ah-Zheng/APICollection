@@ -27,13 +27,18 @@
                 <span class="input-group-text">城市</span>
               </div>
               <select class="form-control" id="areaOp" v-model="area">
-                <option value>-請選擇城市-</option>
+                <option value="">-請選擇城市-</option>
                 <option v-for="(item, index) in areaData" :key="index" :value="item">{{ item }}</option>
               </select>
             </div>
             <button class="btn btn-info w-100 mt-3" @click.prevent="setNewestDate()">
               <font-awesome-icon :icon="['fas', 'sync']" />&nbsp;刷新畫面
             </button>
+            <ul class="mt-3">
+              <li>
+                <span class="text-danger">紅字</span> : 數量 &lt; 5
+              </li>
+            </ul>
           </div>
         </div>
       </div>

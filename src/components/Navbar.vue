@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <router-link class="navbar-brand" to="/">共享PaPa造</router-link>
       <button
         class="navbar-toggler"
@@ -21,17 +21,6 @@
               data-target=".navbar-collapse.show"
               class="nav-link"
               to="/"
-              @click.prevent="link = 'home'"
-            >
-              <font-awesome-icon :icon="['fas', 'home']" />&nbsp;首頁
-            </router-link>
-          </li>
-          <li class="nav-item mx-3" :class="{'active': this.$route.path == '/youbike'}">
-            <router-link
-              data-toggle="collapse"
-              data-target=".navbar-collapse.show"
-              class="nav-link"
-              to="/youbike"
               @click.prevent="link = 'bicycle'"
             >
               <font-awesome-icon :icon="['fas', 'bicycle']" />&nbsp;YouBike
